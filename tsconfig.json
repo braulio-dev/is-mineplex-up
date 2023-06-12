@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "ES2022"],
+      "allowJs": true,
+      "strict": true,
+      "module": "ES2022",
+      "moduleResolution": "node",
+      "jsx": "react-jsx",
+      "allowSyntheticDefaultImports": true,
+      "paths": {
+        "@/*": ["./src/*"]
+      }
+    },
+    "exclude": ["node_modules"]
+  }
+  

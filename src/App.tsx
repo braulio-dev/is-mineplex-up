@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState<any | null>(null);
 
   useEffect(() => {
-    fetch('https://api.mcsrvstat.us/2/mineplex.com')
+    fetch('https://api.mcsrvstat.us/2/hypixel.net')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.log(error));
@@ -21,18 +21,14 @@ function App() {
   const onlineText: string = online ? 'Yes' : 'No';
 
   return (
-    <main className="min-h-screen flex items-center justify-around backdrop-blur-xl flex-wrap-reverse align-middle">
-      <a href="https://discord.gg/mineplex">
-        <Module imageSrc="./flame_white.svg" title="Latest Updates" description="Join the official Mineplex Discord server to get updates on the status of the server."/>
-      </a>
-
-      <div className="space-y-5 m-10">
-        <div className="relative flex justify-center items-center">
+    <main className="select-none min-h-screen items-center justify-evenly backdrop-blur-md flex flex-wrap align-middle">
+      <div className="space-y-5 m-10 justify-center">
+        <div className="items-center">
             <img
                 src="/header.png"
                 alt=""
-                width={600}
-                height={120}
+                width={800}
+                height={160}
             />
         </div>
 
@@ -45,6 +41,16 @@ function App() {
             maxPlayers={data.players?.max}
         />
       </div>
+      
+      <div>
+        <a className="m-7" href="https://discord.gg/mineplex">
+          <Module imageSrc="./flame.svg" title="Latest Updates" description="Join the official Mineplex Discord server to get updates on the status of the server."/>
+        </a>
+        <a className="m-7" href="https://youtube.com/@MineplexGamesOfficial">
+          <Module imageSrc="./video.svg" title="Mineplex YouTube" description="Take a look at the official Mineplex YouTube channel for the latest updates."/>
+        </a>
+      </div>
+
     </main>
   );
 }

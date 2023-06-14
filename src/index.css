@@ -18,7 +18,23 @@
 }
 
 body {
-    background: url("../public/background.png");
+    background: url("../public/background_blur.png");
     background-size: 100% 100%;
+    font-family: 'Segoe UI';
 }
+
+.server-card {
+    font-family: VT323, monospace;
+    letter-spacing: 2px;
+    transform-origin: top left; /* Set the origin of the scaling */
+}
+
+img {  
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+ }
   

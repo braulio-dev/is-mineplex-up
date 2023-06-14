@@ -10,9 +10,6 @@ module.exports = {
       },
       dropShadow: {
         '3xl': '0 60px 60px rgba(0, 0, 0, 1)',
-      },
-      fontFamily: {
-        'minecraft': ['Minecraft', 'sans-serif'],
       }
     },
   },

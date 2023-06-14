@@ -2,7 +2,7 @@ function ServerCard(props: { hostName: string, online: boolean, motd?: string[],
     const serverDescription: string[] = props.motd ? props.motd : ['Can\'t connect to server.'];
     const serverIcon: string = props.icon ? props.icon : "/minecraft-no_logo.jpeg";
     return (
-        <div className="relative rounded-lg bg-server-card font-minecraft tracking-wider p-2">
+        <div className="server-card relative rounded-2xl border-8 border-black/40 border-solid bg-server-card tracking-wider p-2">
             <img
                 className="inline"
                 src={serverIcon}
@@ -10,7 +10,7 @@ function ServerCard(props: { hostName: string, online: boolean, motd?: string[],
                 width={100}
             />
 
-            <div className="inline-block align-top text-red-800 text-2xl m-4 mt-6">
+            <div className="inline-block align-middle text-red-800 text-4xl m-4 mt-6">
             {
                 serverDescription.map((line) => (
                     <p dangerouslySetInnerHTML={{__html: line}}></p>
@@ -18,7 +18,7 @@ function ServerCard(props: { hostName: string, online: boolean, motd?: string[],
             }
             </div>
 
-            <div className="absolute inline-block justify-end align-top text-xl mr-1 right-4">
+            <div className="absolute inline-block justify-end align-top text-2xl mr-1 right-4">
                 <p className="inline text-gray-400">{props.online ? props.onlinePlayers : 0}</p>
                 <p className="inline text-gray-500">/</p>
                 <p className="inline text-gray-400">{props.online ? props.maxPlayers : 0}</p>

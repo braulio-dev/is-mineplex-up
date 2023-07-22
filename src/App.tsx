@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState<any | null>(null);
 
   useEffect(() => {
-    fetch('https://api.mcsrvstat.us/2/hypixel.net')
+    fetch('https://api.mcsrvstat.us/2/mineplex.com')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.log(error));
